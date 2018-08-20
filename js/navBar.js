@@ -1,0 +1,10 @@
+$(function(){
+    $(".hamburger").click(function(){
+        if($(window).width()<768){
+            $(this).toggleClass("is-active");
+            $('.mobileShow').toggleClass('is-active-2');
+        }else{ 
+            $('.mobileShow').removeClass('is-active-2');
+        }
+    });
+})

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>睿科實國際 | RexTek</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="睿科實國際致力於提供最好的住宅居家環境服務，洞悉您的需求並營造屬於您的個人空間。我們承諾給予專業的服務與優良的品質。" />
+	<meta name="keywords" content="電器批發零售、建材批發、門窗安裝工程業、廚具、衛浴設備安裝、自動控制設備工程、室內裝潢、住宅及大樓開發、工業廠房開發、不動產買賣租。" />
+    <link rel="stylesheet" href="bootstrap4.1.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    $(function(){
+        $(window).resize(function(){
+            checkSize();
+            changePadding();
+        })
+        function checkSize(){
+            if($(window).width() >= 600){
+                $('small').html('Copyright © 2018 睿科實國際股份有限公司 | All Rights Reserved');
+            }else{
+                $('small').html('Copyright © 2018 睿科實國際股份有限公司<br>All Rights Reserved');
+            }
+        }
+        checkSize();
+        function changePadding(){
+            $('.masonry>div a').each(function(i,obj){
+                var myH=$(obj).height();    
+                var parentH=$(obj).parent().innerHeight();    
+                $(obj).css({'padding-top':(parentH-myH)/2,'padding-bottom':(parentH-myH)/2});
+            })
+        }
+        changePadding();
+    })
+    </script>
+    <style>
+        a,a:hover{text-decoration: none;color: var(--main-black);}
+        .outerContainer,#sec1,#sec1 .container-fluid,#sec1 .row{height: 100%;} 
+        #sec1 .col-xl-3{position: relative;z-index: 2;}
+        #sec1 .col-xl-3 .container{position: relative;top: 50%;transform: translateY(-50%);margin-left: 20px;}
+        #sec1 .col-xl-9{background: url(image/topImage.jpg) right bottom;background-size: cover;}
+        #sec1 h1{font-size: 2rem; font-weight: bolder;margin-top: 150px;white-space: nowrap;line-height: 57px;}
+        #sec2,#sec3{padding: 0;height: 1200px;}
+        #sec2>div,#sec3>div{padding: 0;height:100%;text-align: center;position: relative;}
+        #sec2 div a,#sec3 div a{display:block; font-size: 4rem;position: relative;top: 50%;transform: translateY(-50%);}
+        #sec2 .masonry div{height: 50%;}
+
+        /*================================================================================*/
+        #sec2 .masonry div:nth-of-type(1){background: url(image/about.jpg) top left;background-size: cover;}
+        #sec2 .masonry div:nth-of-type(2){background: url(image/service.jpg);background-size: cover; }
+        #sec3 .masonry div:nth-of-type(1){background: url(image/project.jpg) right center;height:calc(100%/3*2);background-size: cover;}
+        #sec3 .masonry div:nth-of-type(2){background: url(image/brand.jpg) center;height: calc(100%/3);background-size: cover; }
+        /*================================================================================*/
+        #sec2 .masonry div:nth-of-type(1)::before{content: '';width: 100%;height: 50%;position: absolute;top: 0;left: 0;display: inline-block;background-color: rgba(0, 0, 0, 0);transition: .5s;}
+        #sec2 .masonry #sec2_2::before{content: '';width: 100%;height: 50%;position: absolute;top: 50%;left: 0;display: inline-block;background-color: rgba(0, 0, 0, 0);transition: .5s;}
+        #sec3 .masonry div:nth-of-type(1)::before{content: '';width: 100%;height:calc(100%/3*2);position: absolute;top: 0;left: 0;display: inline-block;background-color: rgba(0, 0, 0, 0);transition: .5s;}
+        #sec3 .masonry #sec3_2::before{content: '';width: 100%;height:calc(100%/3);position: absolute;top:calc(100%/3*2);left: 0;display: inline-block;background-color: rgba(0, 0, 0, 0);transition: .5s;cursor: pointer;}
+        /*================================================================================*/
+        #sec2 .masonry div:nth-of-type(1):hover::before{background-color: rgba(0, 0, 0, 0.7);}
+        #sec2 .masonry #sec2_2:hover::before{background-color: rgba(255, 255, 255, 0.7);}
+        #sec3 .masonry div:nth-of-type(1):hover::before{background-color: rgba(255, 255, 255, 0.7);}
+        #sec3 .masonry #sec3_2:hover::before{background-color: rgba(0, 0, 0, 0.7);}
+        
+        
+        #sec2 .masonry div:nth-of-type(1) a{color: #fff;}
+        #sec2 .masonry div:nth-of-type(2) a{color: var(--main-black);}
+        #sec3 .masonry div:nth-of-type(1) a{color: var(--main-black);}
+        #sec3 .masonry div:nth-of-type(2) a{color: #fff;}
+        #logo{width: 50%;}
+        /*hoverLine----------------------------------------------------------------*/
+        .hoverLine::after{content: ''; display: inline-block;height: 5px;background-color: var(--main-black);position: absolute;bottom: 43%;left: 50%;transform: translateX(-50%);width: 0;transition: .5s;}
+        .hoverLine1::after{background-color:#fff;}
+        .hoverLine3::after{bottom: 44%;}
+        .hoverLine4::after{bottom: 38%;background-color:#fff;}
+        .hoverLine1:hover::after{width: 270px;}
+        .hoverLine2:hover::after{width: 220px;}
+        .hoverLine3:hover::after{width: 240px;}
+        .hoverLine4:hover::after{width: 170px;}
+        
+        /*footer----------------------------------------------------------------*/
+        footer{padding:20px 100px;font-size: 0.75rem;}
+        small{font-size:100%; }
+        footer .row{justify-content: space-between;}
+        .footerContent{display: flex;flex-direction: column;margin: 0;justify-content: space-between;}
+        footer img{width: 30%;display: block;}
+        .footerContent li,small{font-family: '微軟正黑體';}
+        @media(min-width:1600px){
+            #sec1 .col-xl-3 .container{margin-left: 50px;}
+        }
+        @media(max-width:992px){
+            #sec1 h1{margin-top: 20px;font-size: 1.25rem;line-height: 38px;}
+            #sec1 .col-xl-3{text-align: center;height:40%;min-height: 230px;}
+            #sec1 .col-xl-3>.container{margin: auto; }
+            #sec1 .col-xl-9{height: 60%;}
+            #logo{width: 15%;}
+            footer .container{max-width: none;}
+        }
+        @media(max-width:810px){
+            footer img{display: none;}
+            footer .row{display: block;}
+            .containerLast {margin-top: 10px;}
+        }
+        @media(max-width:768px){
+            #sec2,#sec3{height: 920px;}
+            #sec2>div,#sec3>div{height: 100%;}
+            #sec2 .masonry div:nth-of-type(1),#sec2 .masonry div:nth-of-type(2),#sec3 .masonry div:nth-of-type(1),#sec3 .masonry div:nth-of-type(2){ height: 50%; }
+            .hoverLine::after{bottom: 43%;}
+        }
+        @media(max-width:767px){
+            .row1{display: block;}
+            #sec3 .masonry{display: flex;flex-direction: column-reverse;}
+            #sec3 .masonry div:nth-of-type(1)::before{height:50%;top: 50%;}
+            #sec3 .masonry #sec3_2::before{height:50%;top:0%;}
+            }
+        @media(max-width:600px){
+            #logo{width: 30%;}
+            #sec2 div a, #sec3 div a{font-size: 3rem;}
+            #sec1 h1{font-size: 1.2rem;line-height: 35px;}
+            footer{padding:20px;}
+            
+            .hoverLine1:hover::after{width: 200px;}
+            .hoverLine2:hover::after{width: 160px;}
+            .hoverLine3:hover::after{width: 180px;}
+            .hoverLine4:hover::after{width: 130px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid outerContainer">
+        <header id="sec1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-12">
+                        <div class="container">
+                            <img src="image/logo.svg" alt="logo" id="logo">
+                            <h1>沉澱你的心<br>享受個人頂級的<br>劇院空間</h1>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-8 col-12"></div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="row row1">
+                <section id="sec2" class="col-xl-6 col-lg-6 col-md-6 col-12">
+                    <div class="masonry">
+                        <div><a href="about.html" class="hoverLine hoverLine1">About Us</a></div>
+                        <div id="sec2_2"><a href="service.html" class="hoverLine hoverLine2">Service</a></div>
+                    </div>
+                </section>
+                <section id="sec3" class="col-xl-6 col-lg-6 col-md-6 col-12">
+                    <div class="masonry">
+                        <div><a href="projects.html" class="hoverLine hoverLine3">Projects</a></div>
+                        <div id="sec3_2"><a href="brand.html" class="hoverLine hoverLine4">Brand</a></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <ul class="footerContent">
+                        <li>◆ 台北市大安區忠孝東路三段136號5樓之1</li>
+                        <li>◆ 02-87719187</li>
+                        <li>◆ 12345@gmail.com</li>
+                    </ul>
+                    <div class="containerLast">
+                        <img src="image/logo.svg" alt="logo" class="ml-auto">
+                        <small class="ml-auto">Copyright © 2018 睿科實國際股份有限公司 | All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

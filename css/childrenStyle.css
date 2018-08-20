@@ -1,0 +1,95 @@
+a,a:hover{color: var(--main-black);text-decoration: none;}
+/*header-------------------------------------------*/
+header{position: fixed;z-index: 3;width: 100%;background-color: #fff;box-shadow: 0 1px 3px rgba(68, 68, 68, 0.4); height: 75px;}
+.headerContainer{height:100%;}
+.headerContainer>.container{height:100%;display: flex;justify-content: space-between; padding-top: 15px;}
+#topLogo{display: inline-block;width: 100px;height: 50px;background: url(../image/logo.svg) no-repeat center;background-size: contain;}
+.navbar_body{width:auto;margin: 0;}
+.ulWrapper{overflow: hidden;}
+.ulWrapper li{float: left;padding: 15px 20px;font-weight: 700;}
+.mobileShow{display: none;}
+.mobileShow.is-active-2 {transform: translateY(0%);}
+.mainContainer{padding-top: 90px;}
+
+/*-------------------------------------------------*/
+.three{
+    color:var(--main-black);
+    display: inline-block;
+    position: relative;top: 50%;transform: translateY(-50%);
+    display: none;
+}
+#hamburger-1{position: relative;}
+.hamburger .line{
+    width: 30px;
+    height: 2px;
+    background-color:var(--main-black);
+    display: block;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{cursor: pointer;}
+#hamburger-1.is-active .line:nth-child(2){opacity: 0;}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+/*-------------------------------------------------*/
+.hoverLine{position: relative;}
+.hoverLine::after{content: ''; display: inline-block;height: 2px;background-color:  var(--main-black);position: absolute;bottom: -15%;left: 50%;transform: translateX(-50%);width: 0;transition: .5s;}
+.hoverLine1:hover::after{width: 81px;}
+.hoverLine2:hover::after{width: 66px;}
+.hoverLine3:hover::after{width: 71px;}
+.hoverLine4:hover::after{width: 54px;}
+
+/*分頁共同部分---------------------------------------------------------------*/
+.nonIndexH1{font-size: 10rem;color: #eee;text-align: right;font-family:'MuseoSans_500',sans-serif; font-weight: 700;margin-bottom: 60px;margin-top: 40px;}
+.nonIndexH2{padding-top: 50px;font-weight: 700;text-align: center;}
+.h2nopadding{padding-top: 0;}
+@media(max-width:992px){
+    .nonIndexH1{text-align: center;font-size: 7rem;}
+    .ulWrapper ul li{font-size: 0.9rem;padding: 15px;} 
+}
+@media(max-width:767px){
+    .three{display: inline-block;float: right;padding-bottom: 10px;}
+    .hidden{display: none;}
+    .navbar_head{width: 100%;overflow: hidden;}
+    .mobileShow{display: block;position: fixed;width: 100%;height: 100vh;z-index: 2;transform: translateY(-100%);transition: .5s;background-color: #fff;}
+    .mobileShow>nav{height: 100%;margin: 0 auto;position: relative;}
+    .mobileShow .ulWrapper{ position: relative;left: 50%; top: 50%;transform: translate(-50%,-50%);}
+    .mobileShow>nav ul li{float: none;text-align: center;}
+}
+@media(max-width:767px) and (min-width:550px){
+    .mobileShow .ulWrapper{top: 55%;}
+    .mobileShow .ulWrapper ul li{font-size: 1.2rem; padding: 10px 0;}
+    .ulWrapper ul{margin: 20px 0 0;}
+    .mobileShow .hoverLine::after{content: ''; display: inline-block;width: 0;height: 2px;background-color:  var(--main-black);position: absolute;bottom: -15%;left: 50%;transform: translateX(-50%);transition: .5s;}
+    .mobileShow .hoverLine1:hover::after{width: 95px;}
+    .mobileShow .hoverLine2:hover::after{width: 75px;}
+    .mobileShow .hoverLine3:hover::after{width: 80px;}
+    .mobileShow .hoverLine4:hover::after{width: 60px;}
+}
+@media(max-width:600px){
+    .nonIndexH1{font-size: 4rem;}
+    .changePadding {padding-top: 40px;}
+}
+@media(max-width:550px){
+    .mobileShow .ulWrapper ul li{font-size: 2rem;}
+    .hoverLine::after{height: 3px;}
+    .hoverLine1:hover::after{width: 155px;}
+    .hoverLine2:hover::after{width: 120px;}
+    .hoverLine3:hover::after{width: 135px;}
+    .hoverLine4:hover::after{width: 100px;}
+}
